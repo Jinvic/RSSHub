@@ -1,4 +1,4 @@
-import { type Route, type Data } from '@/types';
+import { type Route, type Data, ViewType } from '@/types';
 import { parseDate } from '@/utils/parse-date'; // 解析日期的工具函数
 import ofetch from '@/utils/ofetch'; // 统一使用的请求库
 
@@ -33,12 +33,16 @@ export const handler = async (): Promise<Data> => {
         link: `https://mblog.jinvic.top`,
         // 源文章
         item: items,
+        // 其他信息
+        language: 'zh-CN',
+        logo: `https://mblog.jinvic.top/upload/jinvic`,
+        icon: `https://blog.jinvic.top/favicon.ico`,
     };
 };
 
 export const route: Route = {
     path: '/memo',
-    categories: ['blog'],
+    categories: ['social-media'],
     example: '/memo',
     parameters: {},
     features: {
@@ -48,6 +52,7 @@ export const route: Route = {
         supportBT: false,
         supportPodcast: false,
         supportScihub: false,
+        supportRadar: true,
     },
     url: 'mblog.jinvic.top',
     radar: [
@@ -56,6 +61,7 @@ export const route: Route = {
             target: '/memo',
         },
     ],
+    view: ViewType.SocialMedia,
     name: 'Memos',
     maintainers: ['Jinvic'],
     handler,
