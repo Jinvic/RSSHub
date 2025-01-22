@@ -1,0 +1,46 @@
+{
+  "jinvic": {
+    "routes": {
+      "/memo": {
+        "path": "/memo",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/memo",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "supportRadar": true
+        },
+        "url": "mblog.jinvic.top",
+        "radar": [
+          {
+            "source": [
+              "mblog.jinvic.top",
+              "mblog.jinvic.top/memo/:id"
+            ],
+            "target": "/memo"
+          }
+        ],
+        "view": 1,
+        "name": "Memos",
+        "maintainers": [
+          "Jinvic"
+        ],
+        "location": "memo.ts"
+      }
+    },
+    "name": "极简朋友圈",
+    "url": "mblog.jinvic.top",
+    "categories": [
+      "blog"
+    ],
+    "description": "通过kingwrcy/moments项目部署的个人微博客。",
+    "lang": "zh-CN"
+  }
+}
